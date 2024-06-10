@@ -1,0 +1,106 @@
+// Estilos globais
+body {
+  font-family: $font-stack;
+}
+
+// Contato
+.contato {
+  background-color: $secondary-color;
+  color: white;
+  padding: 10px 0;
+
+  .col {
+    @include flex-center;
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+// Menu
+.menu {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 0;
+
+.col {
+    @include flex-center;
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Imagem Principal
+.imagem_principal {
+  background: url('../images/pessoa_mexendo_notebook.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 300px;
+  @include flex-center;
+  h1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+
+// Boas-vindas
+.boas_vindas {
+  padding: 20px 0;
+
+  .texto_boas_vindas {
+    h2 {
+      color: $primary-color;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+
+  .img_boas_vindas {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Footer
+.footer {
+  background-color: $secondary-color;
+  color: white;
+  padding: 20px 0;
+
+  .card {
+    margin: 10px auto;
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .contato, .menu {
+    .col {
+      flex: 1 1 100%;
+      margin: 5px 0;
+    }
+  }
+  
+  .boas_vindas {
+    .texto_boas_vindas, .img_boas_vindas {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+    .img_boas_vindas {
+      margin-top: 20px;
+    }
+  }
+
+  .footer .card {
+    width: 100%;
+  }
+}
